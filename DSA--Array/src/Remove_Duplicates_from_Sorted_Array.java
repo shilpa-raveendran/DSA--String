@@ -10,6 +10,10 @@ public class Remove_Duplicates_from_Sorted_Array {
     }
 
 //    private static int removeDuplicates(int[] nums) {
+    //Brute Force---> 
+    //Time complexity: O(n*log(n))+O(n)
+    //Space Complexity: O(n) 
+    
 //        TreeSet<Integer> set = new TreeSet<>();
 //        for(int i = 0 ; i <= nums.length-1 ; i++){
 //            set.add(nums[i]);
@@ -21,7 +25,9 @@ public class Remove_Duplicates_from_Sorted_Array {
 //        }
 //        return size;
 //    }
-
+    //Optimal SOlution ( Two pointers)
+    //Time Complexity: O(N)
+    //Space Complexity: O(1)
     private static int removeDuplicates(int[] nums) {
         int i =0;
         for (int j = 1; j <= nums.length-1; j++) {
