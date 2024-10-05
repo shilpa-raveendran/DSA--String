@@ -1,4 +1,4 @@
-public class RotateArrays {
+public class Rotate_array_by_K_elements {
     public static void main(String[] args) {
         int nums[] = {1, 2, 3, 4, 5};
         int k = 2;
