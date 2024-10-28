@@ -1,4 +1,6 @@
-class Solution {
+import java.util.ArrayList;
+
+class UnionOfArray {
     // Function to return a list containing the union of the two arrays.
     public static ArrayList<Integer> findUnion(int a[], int b[]) {
         ArrayList<Integer> result= new ArrayList<>();
