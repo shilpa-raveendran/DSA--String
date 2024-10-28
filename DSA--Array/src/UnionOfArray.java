@@ -39,14 +39,14 @@ class Solution {
   }
   while (i < n) // IF any element left in arr1
   {
-    if (result.get(Union.size()-1) != a[i]){
+    if (result.get(result.size()-1) != a[i]){
         result.add(a[i]);
     }
     i++;
   }
   while (j < m) // If any elements left in arr2
   {
-    if (result.get(Union.size()-1) != b[j]){
+    if (result.get(result.size()-1) != b[j]){
       result.add(b[j]);
     }
     j++;
