@@ -6,7 +6,7 @@ public class MissingNumber {
     public static void main(String[] args) {
         int[] nums={3,0,1};
         //System.out.println(findMissingNumber_BF(nums));
-        System.out.println(findMissingNumber1(nums));
+        System.out.println(findMissingNumber2(nums));
     }
 
     private static int findMissingNumber_BF(int[] nums) {
@@ -50,5 +50,17 @@ public class MissingNumber {
         }
 
         return s1-s2;
+    }
+
+    //Optimal Solution --> using XOR
+    public static int findMissingNumber2(int[] nums) {
+        int res=0;
+        for (int i = 0; i <= nums.length; i++) {
+            res = res ^ i;
+        }
+        for (int i = 0; i <= nums.length-1; i++) {
+            res= res ^ nums[i];
+        }
+        return res;
     }
 }
