@@ -12,21 +12,15 @@ public class SubArraySum {
     //LC: 560. Subarray Sum Equals K
     public static int findTotalNoOfSubarrays(int[] nums, int k) {
         //brute force
-        int res=0;
         int count=0;
         for(int i = 0 ; i < nums.length ; i++){
-
-            int sum=nums[i];
-            if (sum == k) {
-                count++;
-            }
+            int sum=0;
             for (int j = i+1 ; j < nums.length ; j++) {
                 sum = sum + nums[j];
                 if (sum == k) {
                     count++;
                 }
             }
-
         }
         return count;
     }
@@ -36,14 +30,12 @@ public class SubArraySum {
         int res=0;
         for(int i = 0 ; i < nums.length ; i++){
             int count=0;
-            int sum=nums[i];
-            for (int j = i+1 ; j < nums.length ; j++){
+            int sum=0;
+            for (int j = i ; j < nums.length ; j++){
                 sum= sum + nums[j];
                 if(sum == k){
                     count=j-i+1;
-
                 }
-
             }
             res= Math.max(count,res);
         }
