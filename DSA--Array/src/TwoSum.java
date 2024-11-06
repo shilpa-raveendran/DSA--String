@@ -8,7 +8,7 @@ public class TwoSum {
         int[] res=findTwoSumOptimalSol(nums,target);
         System.out.println("{"+res[0]+","+res[1]+"}");
     }
-
+    //After sorting
     private static int[] findTwoSum1(int[] nums, int target) {
         int[] res={-1,-1};
         Arrays.sort(nums);
