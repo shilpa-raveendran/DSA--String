@@ -1,9 +1,9 @@
 public class BuyStockAndSell {
     public static void main(String[] args) {
-        int nums[] = {7,1,5,3,6,4};
+        int[] nums = {7,1,5,3,6,4};
         System.out.println("Profit is "+getStockBuyAndSell(nums));
     }
-
+//BF
     public static int getStockBuyAndSell(int[] nums){
         int max= Integer.MIN_VALUE;
         for(int i = 0 ; i < nums.length ; i++){
